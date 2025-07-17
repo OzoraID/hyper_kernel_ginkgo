@@ -128,3 +128,9 @@ kernel/configs/android-*.cfg
 
 # build out dir
 out/
+
+# ksu
+drivers/kernelsu
+KernelSU-Next/
+KernelSU/
+AK3/
