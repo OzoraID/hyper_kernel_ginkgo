@@ -122,14 +122,10 @@ compile() {
     OBJCOPY=llvm-objcopy \
     OBJDUMP=llvm-objdump \
     STRIP=llvm-strip \
-    CROSS_COMPILE=$ARCH_DIR/bin/aarch64-linux-android- \
-    CROSS_COMPILE_ARM32=$ARM_DIR/bin/arm-linux-androideabi- \
-    CLANG_TRIPLE=aarch64-linux-gnu- \
+    CROSS_COMPILE=${ARCH_DIR}/bin/aarch64-linux-gnu- \
+    CROSS_COMPILE_ARM32=${ARM_DIR}/bin/arm-linux-gnueabi- \
     Image.gz-dtb \
-    dtbo.img \
-    CC="${CCACHE} clang" \
-    $1
-    echo ""
+    dtbo.img
 }
 
 # Check if build succeeded
